@@ -2,8 +2,12 @@ function Validation(values) {
     let error = {}
     const email_pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 <<<<<<< HEAD
+<<<<<<< HEAD
     const password_pattern = /^(?=.*[A-Za-z])(?=.*\d).{6,100}$/;
     const phone_pattern = /^(?:\+\d{1,3})?\d{6,15}$/;
+=======
+    const password_pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{6,100}$/;
+>>>>>>> d49094d24d899d63127c62384305b5c9b2dd613c
 =======
     const password_pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{6,100}$/;
 >>>>>>> d49094d24d899d63127c62384305b5c9b2dd613c

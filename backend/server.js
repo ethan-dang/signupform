@@ -105,6 +105,23 @@ app.post('/login', async (req, res) => {
   }
 });
 
+// Define a route to retrieve all data from the Signup table
+app.get('/signup', async (req, res) => {
+  try {
+    // Use the model's `findAll` method to retrieve all records from the Signup table
+    const users = await Signup.findAll();
+
+    if (users.length === 0) {
+      return res.status(404).json({ message: 'No data found' });
+    }
+
+    res.json(users);
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    res.status(500).json({ error: 'Error fetching data' });
+  }
+});
+
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => {

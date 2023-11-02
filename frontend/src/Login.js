@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Validation from './LoginValidation';
+import Validation from './validation/LoginValidation';
 import Navbar from './NavBar'; 
 
 function Login() {
